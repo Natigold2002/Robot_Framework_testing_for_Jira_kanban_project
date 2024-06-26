@@ -1,0 +1,820 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.11.5 on win32)" generated="2024-06-26T14:31:36.951183" rpa="false" schemaversion="5">
+<suite id="s1" name="Workflow Management" source="C:\Users\NATI\Desktop\uni.doc\FTP\first_year\second sem\SVVT\testsuites\workflow_management\workflow_management.robot">
+<test id="s1-t1" name="TC-FR9-01 valid creation of workflow state" line="15">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-06-26T14:31:37.256107" level="INFO">Opening browser 'chrome' to base url 'https://svvttestingproject.atlassian.net/jira/software/projects/KAN/settings/issuetypes/10001/workflow'.</msg>
+<arg>${WORKFLOW_BOARD}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-06-26T14:31:37.256107" elapsed="8.827508"/>
+</kw>
+<kw name="Login to jira">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//input[@name='username']</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-26T14:31:46.084611" elapsed="1.835989"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-26T14:31:47.921599" level="INFO">Typing text 'natnael.workuk@aastustudent.edu.et' into text field 'xpath=//input[@name='username']'.</msg>
+<arg>xpath=//input[@name='username']</arg>
+<arg>${VALID EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T14:31:47.921599" elapsed="0.791742"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-26T14:31:48.714431" level="INFO">Clicking button 'xpath=//button[@type='submit']'.</msg>
+<arg>xpath=//button[@type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T14:31:48.713434" elapsed="0.183455"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//input[@name='password']</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-26T14:31:48.896889" elapsed="5.225180"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-26T14:31:54.124107" level="INFO">Typing text 'Password@02' into text field 'xpath=//input[@name='password']'.</msg>
+<arg>xpath=//input[@name='password']</arg>
+<arg>${VALID PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T14:31:54.123066" elapsed="0.233206"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-26T14:31:54.358267" level="INFO">Clicking button 'xpath=//button[@type='submit']'.</msg>
+<arg>xpath=//button[@type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T14:31:54.357272" elapsed="0.145615"/>
+</kw>
+<status status="PASS" start="2024-06-26T14:31:46.084611" elapsed="8.418276"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-26T14:32:14.512225" level="INFO">Slept 20 seconds.</msg>
+<arg>20s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-26T14:31:54.504884" elapsed="20.008340"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//input[@id='workflow-editor.status-dialog.status-creator.input']</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-26T14:32:14.514957" elapsed="0.148690"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-26T14:32:14.668875" level="INFO">Typing text 'TESTING' into text field 'id = workflow-editor.status-dialog.status-creator.input'.</msg>
+<arg>id = workflow-editor.status-dialog.status-creator.input</arg>
+<arg>${VALID_NEW_STATE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T14:32:14.667877" elapsed="0.569811"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-26T14:32:25.241498" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-26T14:32:15.241246" elapsed="10.000252"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-26T14:32:25.241498" level="INFO">Clicking button 'xpath=//button[@data-testid='workflow-editor.status-dialog.submit-button']'.</msg>
+<arg>xpath=//button[@data-testid='workflow-editor.status-dialog.submit-button']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T14:32:25.241498" elapsed="0.566229"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//button[@id='workflow-editor.toolbar.save-and-close']</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-26T14:32:25.810905" elapsed="0.156671"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-26T14:32:25.970009" level="INFO">Clicking button 'xpath=//button[@id='workflow-editor.toolbar.save-and-close']'.</msg>
+<arg>xpath=//button[@id='workflow-editor.toolbar.save-and-close']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T14:32:25.967576" elapsed="0.232579"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//div[@data-testid='workflow-associate.ui.associate-workflow-with-issue-types-modal--footer']</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-26T14:32:26.200155" elapsed="0.961081"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-26T14:32:27.161236" level="INFO">Clicking button 'xpath=//div[@data-testid='workflow-associate.ui.associate-workflow-with-issue-types-modal--footer']//button[1]'.</msg>
+<arg>xpath=//div[@data-testid='workflow-associate.ui.associate-workflow-with-issue-types-modal--footer']//button[1]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T14:32:27.161236" elapsed="0.301508"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>It may take some time to update the issue affected by your recent changes.</arg>
+<arg>20s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-06-26T14:32:27.464667" elapsed="1.936519"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-06-26T14:32:29.405179" elapsed="3.777688"/>
+</kw>
+<doc>verify if the system allows valid creation of workflow state</doc>
+<status status="PASS" start="2024-06-26T14:31:37.253083" elapsed="55.930855"/>
+</test>
+<test id="s1-t2" name="TC-FR9-02 invalid creation of state due to duplicate state name" line="31">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-06-26T14:32:33.192233" level="INFO">Opening browser 'chrome' to base url 'https://svvttestingproject.atlassian.net/jira/software/projects/KAN/settings/issuetypes/10001/workflow'.</msg>
+<arg>${WORKFLOW_BOARD}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-06-26T14:32:33.191239" elapsed="9.361095"/>
+</kw>
+<kw name="Login to jira">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//input[@name='username']</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-26T14:32:42.554354" elapsed="1.720692"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-26T14:32:44.276049" level="INFO">Typing text 'natnael.workuk@aastustudent.edu.et' into text field 'xpath=//input[@name='username']'.</msg>
+<arg>xpath=//input[@name='username']</arg>
+<arg>${VALID EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T14:32:44.276049" elapsed="0.806250"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-26T14:32:45.084240" level="INFO">Clicking button 'xpath=//button[@type='submit']'.</msg>
+<arg>xpath=//button[@type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T14:32:45.083296" elapsed="0.201337"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//input[@name='password']</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-26T14:32:45.285114" elapsed="5.211430"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-26T14:32:50.497544" level="INFO">Typing text 'Password@02' into text field 'xpath=//input[@name='password']'.</msg>
+<arg>xpath=//input[@name='password']</arg>
+<arg>${VALID PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T14:32:50.497544" elapsed="0.210130"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-26T14:32:50.707674" level="INFO">Clicking button 'xpath=//button[@type='submit']'.</msg>
+<arg>xpath=//button[@type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T14:32:50.707674" elapsed="0.185993"/>
+</kw>
+<status status="PASS" start="2024-06-26T14:32:42.553356" elapsed="8.341310"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-26T14:33:05.902240" level="INFO">Slept 15 seconds.</msg>
+<arg>15s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-26T14:32:50.900617" elapsed="15.001623"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//input[@id='workflow-editor.status-dialog.status-creator.input']</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-26T14:33:05.904241" elapsed="7.382464"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-26T14:33:13.286705" level="INFO">Typing text 'DONE' into text field 'id = workflow-editor.status-dialog.status-creator.input'.</msg>
+<arg>id = workflow-editor.status-dialog.status-creator.input</arg>
+<arg>DONE</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T14:33:13.286705" elapsed="0.361658"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-26T14:33:23.652795" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-26T14:33:13.652388" elapsed="10.000407"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-26T14:33:23.652795" level="INFO">Clicking button 'xpath=//button[@data-testid='workflow-editor.status-dialog.submit-button']'.</msg>
+<arg>xpath=//button[@data-testid='workflow-editor.status-dialog.submit-button']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T14:33:23.652795" elapsed="0.319904"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Already exists. Try a different name.</arg>
+<arg>20s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-06-26T14:33:23.973521" elapsed="0.062380"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-06-26T14:33:24.036897" elapsed="3.220934"/>
+</kw>
+<doc>verify if the system shows error message when duplicate state name is used to create state</doc>
+<status status="PASS" start="2024-06-26T14:32:33.188286" elapsed="54.071667"/>
+</test>
+<test id="s1-t3" name="TC-FR9-03 invalid creation of state due to Missing name" line="42">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-06-26T14:33:27.269444" level="INFO">Opening browser 'chrome' to base url 'https://svvttestingproject.atlassian.net/jira/software/projects/KAN/settings/issuetypes/10001/workflow'.</msg>
+<arg>${WORKFLOW_BOARD}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-06-26T14:33:27.267501" elapsed="11.053027"/>
+</kw>
+<kw name="Login to jira">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//input[@name='username']</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-26T14:33:38.322571" elapsed="1.542988"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-26T14:33:39.865559" level="INFO">Typing text 'natnael.workuk@aastustudent.edu.et' into text field 'xpath=//input[@name='username']'.</msg>
+<arg>xpath=//input[@name='username']</arg>
+<arg>${VALID EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T14:33:39.865559" elapsed="0.663979"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-26T14:33:40.530557" level="INFO">Clicking button 'xpath=//button[@type='submit']'.</msg>
+<arg>xpath=//button[@type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T14:33:40.530557" elapsed="0.210107"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//input[@name='password']</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-26T14:33:40.740664" elapsed="5.663915"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-26T14:33:46.405573" level="INFO">Typing text 'Password@02' into text field 'xpath=//input[@name='password']'.</msg>
+<arg>xpath=//input[@name='password']</arg>
+<arg>${VALID PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T14:33:46.405573" elapsed="0.240162"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-26T14:33:46.647889" level="INFO">Clicking button 'xpath=//button[@type='submit']'.</msg>
+<arg>xpath=//button[@type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T14:33:46.646888" elapsed="0.163648"/>
+</kw>
+<status status="PASS" start="2024-06-26T14:33:38.321571" elapsed="8.488965"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-26T14:34:01.813140" level="INFO">Slept 15 seconds.</msg>
+<arg>15s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-26T14:33:46.812648" elapsed="15.000492"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//input[@id='workflow-editor.status-dialog.status-creator.input']</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-26T14:34:01.813140" elapsed="6.607222"/>
+</kw>
+<kw name="Element Should Be Disabled" owner="SeleniumLibrary">
+<arg>xpath=//button[@data-testid='workflow-editor.status-dialog.submit-button']</arg>
+<doc>Verifies that element identified by ``locator`` is disabled.</doc>
+<status status="PASS" start="2024-06-26T14:34:08.421297" elapsed="0.060534"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-06-26T14:34:08.482827" elapsed="3.224581"/>
+</kw>
+<doc>verify that the system does not allow creation of state with empty name</doc>
+<status status="PASS" start="2024-06-26T14:33:27.265302" elapsed="44.444522"/>
+</test>
+<test id="s1-t4" name="TC-FR9-04 valid creation of transition between states" line="51">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-06-26T14:34:11.722939" level="INFO">Opening browser 'chrome' to base url 'https://svvttestingproject.atlassian.net/jira/software/projects/KAN/settings/issuetypes/10001/workflow'.</msg>
+<arg>${WORKFLOW_BOARD}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-06-26T14:34:11.720898" elapsed="9.709902"/>
+</kw>
+<kw name="Login to jira">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//input[@name='username']</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-26T14:34:21.433560" elapsed="1.757947"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-26T14:34:23.192502" level="INFO">Typing text 'natnael.workuk@aastustudent.edu.et' into text field 'xpath=//input[@name='username']'.</msg>
+<arg>xpath=//input[@name='username']</arg>
+<arg>${VALID EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T14:34:23.191507" elapsed="0.889790"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-26T14:34:24.081838" level="INFO">Clicking button 'xpath=//button[@type='submit']'.</msg>
+<arg>xpath=//button[@type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T14:34:24.081838" elapsed="0.178310"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//input[@name='password']</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-26T14:34:24.260148" elapsed="5.538175"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-26T14:34:29.800130" level="INFO">Typing text 'Password@02' into text field 'xpath=//input[@name='password']'.</msg>
+<arg>xpath=//input[@name='password']</arg>
+<arg>${VALID PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T14:34:29.799132" elapsed="0.228808"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-26T14:34:30.028939" level="INFO">Clicking button 'xpath=//button[@type='submit']'.</msg>
+<arg>xpath=//button[@type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T14:34:30.027940" elapsed="0.143069"/>
+</kw>
+<status status="PASS" start="2024-06-26T14:34:21.433560" elapsed="8.737722"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-26T14:34:45.176208" level="INFO">Slept 15 seconds.</msg>
+<arg>15s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-26T14:34:30.174676" elapsed="15.002362"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//input[contains(@id, 'project-config-commons-status-multi-selector')]</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-26T14:34:45.181659" elapsed="4.311325"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-26T14:34:49.493980" level="INFO">Typing text 'TO DO' into text field 'xpath=//input[contains(@id, 'project-config-commons-status-multi-selector')]'.</msg>
+<arg>xpath=//input[contains(@id, 'project-config-commons-status-multi-selector')]</arg>
+<arg>TO DO</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T14:34:49.493980" elapsed="0.459387"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-26T14:34:54.953510" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-26T14:34:49.953367" elapsed="5.000143"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-26T14:34:54.953510" level="INFO">Typing text 'DONE' into text field 'xpath=//input[contains(@id, 'project-config-commons-status-selector')]'.</msg>
+<arg>xpath=//input[contains(@id, 'project-config-commons-status-selector')]</arg>
+<arg>DONE</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T14:34:54.953510" elapsed="1.096693"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-26T14:35:01.051702" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-26T14:34:56.050982" elapsed="5.000720"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-26T14:35:01.051702" level="INFO">Typing text 'transition_new' into text field 'xpath=//input[contains(@id, 'transition-name')]'.</msg>
+<arg>xpath=//input[contains(@id, 'transition-name')]</arg>
+<arg>transition_new</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T14:35:01.051702" elapsed="0.904275"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-26T14:35:01.958801" level="INFO">Clicking button 'xpath=//button[@data-testid = 'workflow-editor.transition-dialog.submit']'.</msg>
+<arg>xpath=//button[@data-testid = 'workflow-editor.transition-dialog.submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T14:35:01.956975" elapsed="0.392661"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//button[@id='workflow-editor.toolbar.save-and-close']</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-26T14:35:02.391597" elapsed="0.148789"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-26T14:35:02.540386" level="INFO">Clicking button 'xpath=//button[@id='workflow-editor.toolbar.save-and-close']'.</msg>
+<arg>xpath=//button[@id='workflow-editor.toolbar.save-and-close']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T14:35:02.540386" elapsed="0.189931"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-26T14:35:12.731586" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-26T14:35:02.730482" elapsed="10.001104"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//div[@data-testid='workflow-associate.ui.associate-workflow-with-issue-types-modal--footer']</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-26T14:35:12.731586" elapsed="0.037998"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-26T14:35:22.771048" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-26T14:35:12.770588" elapsed="10.000460"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-26T14:35:22.771048" level="INFO">Clicking button 'xpath=//div[@data-testid='workflow-associate.ui.associate-workflow-with-issue-types-modal--footer']//button[1]'.</msg>
+<arg>xpath=//div[@data-testid='workflow-associate.ui.associate-workflow-with-issue-types-modal--footer']//button[1]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T14:35:22.771048" elapsed="0.765943"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>It may take some time to update the issue affected by your recent changes.</arg>
+<arg>20s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-06-26T14:35:23.539092" elapsed="2.724485"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-06-26T14:35:26.266565" elapsed="3.620008"/>
+</kw>
+<doc>verify that the systems allow creation of transition between states</doc>
+<status status="PASS" start="2024-06-26T14:34:11.714940" elapsed="78.171633"/>
+</test>
+<test id="s1-t5" name="TC-FR9-05 invalid transition creation due to Missing from state" line="73">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-06-26T14:35:29.890768" level="INFO">Opening browser 'chrome' to base url 'https://svvttestingproject.atlassian.net/jira/software/projects/KAN/settings/issuetypes/10001/workflow'.</msg>
+<arg>${WORKFLOW_BOARD}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-06-26T14:35:29.890768" elapsed="9.217441"/>
+</kw>
+<kw name="Login to jira">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//input[@name='username']</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-26T14:35:39.111332" elapsed="1.975254"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-26T14:35:41.087607" level="INFO">Typing text 'natnael.workuk@aastustudent.edu.et' into text field 'xpath=//input[@name='username']'.</msg>
+<arg>xpath=//input[@name='username']</arg>
+<arg>${VALID EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T14:35:41.087607" elapsed="0.738626"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-26T14:35:41.828295" level="INFO">Clicking button 'xpath=//button[@type='submit']'.</msg>
+<arg>xpath=//button[@type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T14:35:41.827295" elapsed="0.151096"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//input[@name='password']</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-26T14:35:41.978391" elapsed="5.564023"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-26T14:35:47.543410" level="INFO">Typing text 'Password@02' into text field 'xpath=//input[@name='password']'.</msg>
+<arg>xpath=//input[@name='password']</arg>
+<arg>${VALID PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T14:35:47.542414" elapsed="0.248727"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-26T14:35:47.792246" level="INFO">Clicking button 'xpath=//button[@type='submit']'.</msg>
+<arg>xpath=//button[@type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T14:35:47.792246" elapsed="0.173905"/>
+</kw>
+<status status="PASS" start="2024-06-26T14:35:39.110224" elapsed="8.855927"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-26T14:36:02.968799" level="INFO">Slept 15 seconds.</msg>
+<arg>15s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-26T14:35:47.968147" elapsed="15.000652"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//input[contains(@id, 'project-config-commons-status-multi-selector')]</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-26T14:36:02.972876" elapsed="2.042580"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-26T14:36:05.015456" level="INFO">Typing text 'TO DO' into text field 'xpath=//input[contains(@id, 'project-config-commons-status-selector')]'.</msg>
+<arg>xpath=//input[contains(@id, 'project-config-commons-status-selector')]</arg>
+<arg>TO DO</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T14:36:05.015456" elapsed="0.503889"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-26T14:36:10.521002" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-26T14:36:05.520344" elapsed="5.000658"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-26T14:36:10.521002" level="INFO">Typing text 'transition_new_2' into text field 'xpath=//input[contains(@id, 'transition-name')]'.</msg>
+<arg>xpath=//input[contains(@id, 'transition-name')]</arg>
+<arg>transition_new_2</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T14:36:10.521002" elapsed="0.825023"/>
+</kw>
+<kw name="Element Should Be Disabled" owner="SeleniumLibrary">
+<arg>xpath=//button[@data-testid='workflow-editor.transition-dialog.submit']</arg>
+<doc>Verifies that element identified by ``locator`` is disabled.</doc>
+<status status="PASS" start="2024-06-26T14:36:11.346025" elapsed="0.120981"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-06-26T14:36:11.468005" elapsed="2.849984"/>
+</kw>
+<doc>verify that it does not allow creation of transition when the from stateis not specified</doc>
+<status status="PASS" start="2024-06-26T14:35:29.888582" elapsed="44.430429"/>
+</test>
+<test id="s1-t6" name="TC-FR9-06 invalid transition creation due to Missing to state" line="85">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-06-26T14:36:14.322555" level="INFO">Opening browser 'chrome' to base url 'https://svvttestingproject.atlassian.net/jira/software/projects/KAN/settings/issuetypes/10001/workflow'.</msg>
+<arg>${WORKFLOW_BOARD}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-06-26T14:36:14.322555" elapsed="8.869351"/>
+</kw>
+<kw name="Login to jira">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//input[@name='username']</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-26T14:36:23.194761" elapsed="1.525117"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-26T14:36:24.721000" level="INFO">Typing text 'natnael.workuk@aastustudent.edu.et' into text field 'xpath=//input[@name='username']'.</msg>
+<arg>xpath=//input[@name='username']</arg>
+<arg>${VALID EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T14:36:24.721000" elapsed="0.772057"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-26T14:36:25.494055" level="INFO">Clicking button 'xpath=//button[@type='submit']'.</msg>
+<arg>xpath=//button[@type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T14:36:25.493057" elapsed="0.246109"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//input[@name='password']</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-26T14:36:25.739166" elapsed="5.573879"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-26T14:36:31.313045" level="INFO">Typing text 'Password@02' into text field 'xpath=//input[@name='password']'.</msg>
+<arg>xpath=//input[@name='password']</arg>
+<arg>${VALID PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T14:36:31.313045" elapsed="0.214411"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-26T14:36:31.528451" level="INFO">Clicking button 'xpath=//button[@type='submit']'.</msg>
+<arg>xpath=//button[@type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T14:36:31.527456" elapsed="0.277173"/>
+</kw>
+<status status="PASS" start="2024-06-26T14:36:23.193764" elapsed="8.613036"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-26T14:36:46.810814" level="INFO">Slept 15 seconds.</msg>
+<arg>15s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-26T14:36:31.808850" elapsed="15.001964"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//input[contains(@id, 'project-config-commons-status-multi-selector')]</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-26T14:36:46.810814" elapsed="4.667891"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-26T14:36:51.478705" level="INFO">Typing text 'TO DO' into text field 'xpath=//input[contains(@id, 'project-config-commons-status-multi-selector')]'.</msg>
+<arg>xpath=//input[contains(@id, 'project-config-commons-status-multi-selector')]</arg>
+<arg>TO DO</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T14:36:51.478705" elapsed="0.568907"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-26T14:36:57.049684" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-26T14:36:52.049434" elapsed="5.000766"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-26T14:36:57.054270" level="INFO">Typing text 'transition_new_2' into text field 'xpath=//input[contains(@id, 'transition-name')]'.</msg>
+<arg>xpath=//input[contains(@id, 'transition-name')]</arg>
+<arg>transition_new_2</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T14:36:57.053049" elapsed="0.999330"/>
+</kw>
+<kw name="Element Should Be Disabled" owner="SeleniumLibrary">
+<arg>xpath=//button[@data-testid='workflow-editor.transition-dialog.submit']</arg>
+<doc>Verifies that element identified by ``locator`` is disabled.</doc>
+<status status="PASS" start="2024-06-26T14:36:58.061322" elapsed="0.662387"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-06-26T14:36:58.725703" elapsed="3.752828"/>
+</kw>
+<doc>verify that it does not allow creation of transition when the to stateis not specified</doc>
+<status status="PASS" start="2024-06-26T14:36:14.321005" elapsed="48.160717"/>
+</test>
+<test id="s1-t7" name="TC-FR9-07 invalid transition creation due to Missing transition name" line="97">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-06-26T14:37:02.492134" level="INFO">Opening browser 'chrome' to base url 'https://svvttestingproject.atlassian.net/jira/software/projects/KAN/settings/issuetypes/10001/workflow'.</msg>
+<arg>${WORKFLOW_BOARD}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-06-26T14:37:02.491137" elapsed="13.615039"/>
+</kw>
+<kw name="Login to jira">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//input[@name='username']</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-26T14:37:16.108175" elapsed="2.255470"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-26T14:37:18.364682" level="INFO">Typing text 'natnael.workuk@aastustudent.edu.et' into text field 'xpath=//input[@name='username']'.</msg>
+<arg>xpath=//input[@name='username']</arg>
+<arg>${VALID EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T14:37:18.363645" elapsed="0.871625"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-26T14:37:19.235270" level="INFO">Clicking button 'xpath=//button[@type='submit']'.</msg>
+<arg>xpath=//button[@type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T14:37:19.235270" elapsed="0.144111"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//input[@name='password']</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-26T14:37:19.380377" elapsed="4.557199"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-26T14:37:23.938607" level="INFO">Typing text 'Password@02' into text field 'xpath=//input[@name='password']'.</msg>
+<arg>xpath=//input[@name='password']</arg>
+<arg>${VALID PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T14:37:23.938607" elapsed="0.248689"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-26T14:37:24.188411" level="INFO">Clicking button 'xpath=//button[@type='submit']'.</msg>
+<arg>xpath=//button[@type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T14:37:24.188293" elapsed="0.138542"/>
+</kw>
+<status status="PASS" start="2024-06-26T14:37:16.107173" elapsed="8.219662"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-26T14:37:39.332397" level="INFO">Slept 15 seconds.</msg>
+<arg>15s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-26T14:37:24.327934" elapsed="15.004463"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//input[contains(@id, 'project-config-commons-status-multi-selector')]</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-26T14:37:39.333394" elapsed="5.017866"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-26T14:37:44.353254" level="INFO">Typing text 'TO DO' into text field 'xpath=//input[contains(@id, 'project-config-commons-status-multi-selector')]'.</msg>
+<arg>xpath=//input[contains(@id, 'project-config-commons-status-multi-selector')]</arg>
+<arg>TO DO</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T14:37:44.352254" elapsed="0.513929"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-26T14:37:49.868133" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-26T14:37:44.867022" elapsed="5.001371"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-26T14:37:49.871390" level="INFO">Typing text 'DFGH' into text field 'xpath=//input[contains(@id, 'project-config-commons-status-selector')]'.</msg>
+<arg>xpath=//input[contains(@id, 'project-config-commons-status-selector')]</arg>
+<arg>DFGH</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T14:37:49.870385" elapsed="0.452080"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-26T14:37:55.324492" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-26T14:37:50.323640" elapsed="5.000852"/>
+</kw>
+<kw name="Element Should Be Disabled" owner="SeleniumLibrary">
+<arg>xpath=//button[@data-testid='workflow-editor.transition-dialog.submit']</arg>
+<doc>Verifies that element identified by ``locator`` is disabled.</doc>
+<status status="PASS" start="2024-06-26T14:37:55.324492" elapsed="0.099597"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-06-26T14:37:55.428101" elapsed="2.568020"/>
+</kw>
+<doc>verify that it does not allow creation of transition when the transition name is not specified</doc>
+<status status="PASS" start="2024-06-26T14:37:02.486054" elapsed="55.511524"/>
+</test>
+<test id="s1-t8" name="TC-FR10-01 valid issue transition from one state to another" line="110">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-06-26T14:37:58.009582" level="INFO">Opening browser 'chrome' to base url 'https://svvttestingproject.atlassian.net/jira/software/projects/KAN/boards/1?selectedIssue=KAN-2'.</msg>
+<arg>${ISSUE_LINK}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-06-26T14:37:58.007321" elapsed="12.910269"/>
+</kw>
+<kw name="Login to jira">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//input[@name='username']</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-26T14:38:10.918587" elapsed="1.709832"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-26T14:38:12.629416" level="INFO">Typing text 'natnael.workuk@aastustudent.edu.et' into text field 'xpath=//input[@name='username']'.</msg>
+<arg>xpath=//input[@name='username']</arg>
+<arg>${VALID EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T14:38:12.629416" elapsed="0.716596"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-26T14:38:13.347009" level="INFO">Clicking button 'xpath=//button[@type='submit']'.</msg>
+<arg>xpath=//button[@type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T14:38:13.346012" elapsed="0.155670"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//input[@name='password']</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-26T14:38:13.502681" elapsed="4.794446"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-26T14:38:18.298122" level="INFO">Typing text 'Password@02' into text field 'xpath=//input[@name='password']'.</msg>
+<arg>xpath=//input[@name='password']</arg>
+<arg>${VALID PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T14:38:18.297127" elapsed="0.223870"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-26T14:38:18.522161" level="INFO">Clicking button 'xpath=//button[@type='submit']'.</msg>
+<arg>xpath=//button[@type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T14:38:18.522045" elapsed="0.175381"/>
+</kw>
+<status status="PASS" start="2024-06-26T14:38:10.918587" elapsed="7.779828"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-26T14:38:28.703084" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-26T14:38:18.701568" elapsed="10.001516"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//button[@id = 'issue.fields.status-view.status-button']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-26T14:38:28.703084" elapsed="15.566107"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-26T14:38:44.273010" level="INFO">Clicking button 'xpath=//button[@id = 'issue.fields.status-view.status-button']'.</msg>
+<arg>xpath=//button[@id = 'issue.fields.status-view.status-button']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T14:38:44.272713" elapsed="0.771744"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-26T14:39:00.044705" level="INFO">Slept 15 seconds.</msg>
+<arg>15s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-26T14:38:45.044457" elapsed="15.000248"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-06-26T14:39:00.155314" level="INFO">Element 'xpath=//div[@data-testid='platform-board-kit.ui.column.draggable-column.styled-wrapper'][4]//div[@data-testid='software-board.board-container.board.card-container.card-with-icc']' is displayed.</msg>
+<arg>xpath=//div[@data-testid='platform-board-kit.ui.column.draggable-column.styled-wrapper'][4]//div[@data-testid='software-board.board-container.board.card-container.card-with-icc']</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-26T14:39:00.044705" elapsed="0.110609"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-06-26T14:39:00.155314" elapsed="3.033894"/>
+</kw>
+<doc>verify that it does  allow  transition of state from one to another</doc>
+<status status="PASS" start="2024-06-26T14:37:58.003980" elapsed="65.186634"/>
+</test>
+<status status="PASS" start="2024-06-26T14:31:36.953315" elapsed="446.244184"/>
+</suite>
+<statistics>
+<total>
+<stat pass="8" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="8" fail="0" skip="0" id="s1" name="Workflow Management">Workflow Management</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
